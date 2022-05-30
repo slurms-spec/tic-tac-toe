@@ -3,11 +3,14 @@ let squares = document.querySelectorAll('.selectedSquare')
 Array.from(squares).forEach(e => e.addEventListener('click', markBoard))
 
 
+
+
+
     let clickNo = 0
     let player1Selections = [] // change to array of box no.s, just checking for tally now
     let player2Selections = []
 
-
+   
 
 function markBoard(click) {
 
@@ -85,12 +88,43 @@ function markBoard(click) {
                                         player2Selections.unshift(9)
        
         }
-
+        if(player1Selections.includes((1,5,9))){
+            console.log('player 1 is the god damn winner')
+        }
 
       
-   
+        
+        
 
 }
 
 
 }
+
+
+
+// next step: find away to find the win combos in the array. 
+
+// put the result in the dom 
+
+// if(player1Selections.includes(1) && player1Selections.includes(5) && player1Selections.includes(9)){
+//             document.querySelector('p').innerText = "Player 1 Wins!"
+//             console.log("player 1 wins")
+//         }
+
+if(player1Selections.includes((1,5,9))){
+    console.log('player 1 is the god damn winner')
+}
+
+
+
+// 159
+// 123
+// 147
+// 456
+// 258
+// 369
+// 789
+// 357
+
+
