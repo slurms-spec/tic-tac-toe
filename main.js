@@ -2,7 +2,7 @@ let squares = document.querySelectorAll('.selectedSquare')
 
 Array.from(squares).forEach(e => e.addEventListener('click', markBoard))
 
-
+Array.from(squares).forEach(e => e.addEventListener('click', checkForWin))
 
 
 
@@ -88,9 +88,7 @@ function markBoard(click) {
                                         player2Selections.unshift(9)
        
         }
-        if(player1Selections.includes((1,5,9))){
-            console.log('player 1 is the god damn winner')
-        }
+      
 
       
         
@@ -101,30 +99,86 @@ function markBoard(click) {
 
 }
 
+function checkForWin(){
 
+   if(player1Selections.includes(1)&& player1Selections.includes(5) && player1Selections.includes(9) || 
+   player1Selections.includes(1)&& player1Selections.includes(2) && player1Selections.includes(3) ||
+   player1Selections.includes(1)&& player1Selections.includes(4) && player1Selections.includes(7) ||
+   player1Selections.includes(4)&& player1Selections.includes(5) && player1Selections.includes(6) ||
+   player1Selections.includes(2)&& player1Selections.includes(5) && player1Selections.includes(8) ||
+   player1Selections.includes(7)&& player1Selections.includes(8) && player1Selections.includes(9) ||
+   player1Selections.includes(3)&& player1Selections.includes(5) && player1Selections.includes(7)) {
+       alert('PLYAER ONE WINS')
+   } else if (
 
-// next step: find away to find the win combos in the array. 
+    player2Selections.includes(1)&& player2Selections.includes(5) && player2Selections.includes(9) || 
+    player2Selections.includes(1)&& player2Selections.includes(2) && player2Selections.includes(3) ||
+    player2Selections.includes(1)&& player2Selections.includes(4) && player2Selections.includes(7) ||
+    player2Selections.includes(4)&& player2Selections.includes(5) && player2Selections.includes(6) ||
+    player2Selections.includes(2)&& player2Selections.includes(5) && player2Selections.includes(8) ||
+    player2Selections.includes(7)&& player2Selections.includes(8) && player2Selections.includes(9) ||
+    player2Selections.includes(3)&& player2Selections.includes(5) && player2Selections.includes(7)) {
+        alert('PLYAER Two WINS')
+    } 
+        
 
-// put the result in the dom 
+       
+   
+      
 
-// if(player1Selections.includes(1) && player1Selections.includes(5) && player1Selections.includes(9)){
-//             document.querySelector('p').innerText = "Player 1 Wins!"
-//             console.log("player 1 wins")
-//         }
-
-if(player1Selections.includes((1,5,9))){
-    console.log('player 1 is the god damn winner')
 }
 
 
 
-// 159
-// 123
-// 147
-// 456
-// 258
-// 369
-// 789
-// 357
 
+
+
+
+// // next step: find away to find the win combos in the array. 
+
+// // put the result in the dom \
+
+// // if(player1Selections.includes(1) && player1Selections.includes(5) && player1Selections.includes(9)){
+// //             document.querySelector('p').innerText = "Player 1 Wins!"
+// //             console.log("player 1 wins")
+// //         }
+
+
+
+
+// // 159
+// // 123
+// // 147
+// // 456
+// // 258
+// // 369
+// // 789
+// // 357
+
+
+// // let promise  = new Promise(function(resolve, reject){
+   
+// // })
+
+// // promise.then(
+// //     result => alert(result),
+// //     error => alert(error)
+// // )
+
+
+// // function addsTwo(one, two){
+// //     return one + two
+// // }
+
+// // function findSquareOfSum(num1, num2, addsTwo){
+// //     alert(addsTwo(num1, num2) * (addsTwo(num1, num2)))
+// // }
+
+// // findSquareOfSum(2,4, addsTwo)
+
+
+// function alertIt(){
+ //   console.log("TESTING TEST 123 MOTHERFUCKER")
+// }
+// setTimeout(alertIt, 6000)
 
